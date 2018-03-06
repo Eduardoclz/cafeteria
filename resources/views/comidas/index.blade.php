@@ -9,8 +9,25 @@
     <script src="main.js"></script>
 </head>
 <body>
-    <h> Comidas   </h>
-    <button> Agregar comida </button>
+    <h> Comidas</h>
+    @if($exito !=null)
+    @if($exito == 1)
+    <p>
+        se ha agregado una comida
+    </p>
+    @else
+    <p> 
+        no se a podido agregar comida
+    </p>
+    @endif
+    @endif
+    <h1>
+        <a href="{{route('comidas.create')}}">
+            <button> Agregar comida </button>
+    </a>
+  
+    
+</h1>
     <table>
         <thead>
             <tr>
